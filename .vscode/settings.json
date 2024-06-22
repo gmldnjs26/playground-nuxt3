@@ -1,0 +1,8 @@
+{
+  "editor.defaultFormatter": "", // 
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.tabSize": 2
+}
