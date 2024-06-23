@@ -5,4 +5,8 @@ export default defineNuxtConfig({
     shim: false,
     typeCheck: true, // 빌드 시 타입 검사를 활성화
   },
+  modules: ['nuxt-quasar-ui'],
+  quasar: {
+    //
+  },
 });

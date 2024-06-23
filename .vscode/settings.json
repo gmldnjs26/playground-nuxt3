@@ -1,5 +1,5 @@
 {
-  "editor.defaultFormatter": "", // 
+  "editor.defaultFormatter": "", // 이 프로젝트에서는 eslint내에서 prettier를 움직이고 있이므로 기존의 포맷설정을 초기화
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
