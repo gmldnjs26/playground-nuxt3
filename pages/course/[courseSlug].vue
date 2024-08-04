@@ -1,3 +1,17 @@
+<script lang="ts">
+definePageMeta({
+  title: 'Course',
+  description: '웹 개발 입문부터 실전까지 학습하세요',
+});
+</script>
+
+<script setup lang="ts">
+const route = useRoute();
+const { course, prevCourse, nextCourse } = useCourse(
+  route.params.courseSlug as string,
+);
+</script>
+
 <template>
   <div class="q-pa-xl">
     <AppCard>
@@ -45,13 +59,21 @@
       <p class="q-mt-lg text-grey-8">
         {{ course?.content }}
       </p>
+      <template #footer>
+        <q-btn
+          v-if="prevCourse"
+          label="이전강의"
+          color="primary"
+          :to="prevCourse?.path"
+        />
+        <q-space />
+        <q-btn
+          v-if="nextCourse"
+          label="다음강의"
+          color="primary"
+          :to="nextCourse?.path"
+        />
+      </template>
     </AppCard>
   </div>
 </template>
-
-<script setup lang="ts">
-const route = useRoute();
-const { course } = useCourse(route.params.courseSlug as string);
-</script>
-
-<style scoped></style>
