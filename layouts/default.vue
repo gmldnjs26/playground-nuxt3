@@ -3,9 +3,9 @@
     <q-header elevated class="bg-dark text-white">
       <q-toolbar>
         <q-toolbar-title> Nuxt3 Playground </q-toolbar-title>
-        <q-btn stretch flat label="Home" to="/" />
+        <q-btn stretch flat :label="$t('home')" to="/" />
         <q-separator dark vertical />
-        <q-btn stretch flat label="About" to="/about" />
+        <q-btn stretch flat :label="$t('about')" to="/about" />
       </q-toolbar>
     </q-header>
     <q-page-container :style="pageContainerStyle">
